@@ -4,7 +4,7 @@
 
 
 
-function generate_name()
+function namesynth()
 
 
 -- Letters and dipgraphs
@@ -16,7 +16,7 @@ function generate_name()
 
 -- Create empty name with a random length
     local name = ""
-    local length = math.random(4, 7)
+    local length = math.random(4, 6)
     local prev_letter_type
 
 
@@ -61,7 +61,7 @@ end
 local file = io.open("names.txt", "w")
 if file then
     for i = 1, 16 do
-        local output = generate_name()
+        local output = namesynth()
         file:write(output .. "\n")
     end
 file:close()
